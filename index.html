@@ -1,9 +1,33 @@
 <html>
   <head>
-    <link rel="stylesheet" href="main.css">  
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="myApp">
     <h3>Start with : man portfolio</h3>
-    ~$ <input type="text" autofocus="autofocus">
+    <div ng-controller="myCtrl">
+    ~$ <input type="text" autofocus="autofocus" ng-model="ip" ng-keypress="($event.charCode==13)? check() : return">
+    <br>
+    <h3>{{result}}</h3>
+  </div>
   </body>
+
+  <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  commands = {"man portfolio":1, "school":2}
+  $scope.result = "";
+  $scope.check = function() {
+    var command = $scope.ip;
+    if(command in commands){
+      window.alert("ys");
+    }
+    else{
+      $scope.result = "command not found: " + command;
+    }
+  }
+});
+
+</script>
+
 </html>
