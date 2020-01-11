@@ -1,46 +1,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
   </head>
   <body ng-app="myApp">
     <h3>Start with : man portfolio</h3>
-    <div ng-controller="myCtrl">
-    ~$ <input type="text" autofocus="autofocus" ng-model="ip" ng-keypress="($event.charCode==13)? check() : return">
-    <br>
-    <div ng-bind-html="myText">
-    </div>
-  </div>
+    <div id="terminal"></div>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="app.js"></script>
   </body>
-
-  <script>
-var app = angular.module('myApp', ['ngSanitize']);
-app.controller('myCtrl', function($scope) {
-  commands = {"man portfolio":1, "school":2}
-  $scope.result = "";
-  $scope.check = function() {
-    var command = $scope.ip;
-    if(command == "clear"){
-      $scope.myText = "";
-    }
-    else{
-      switch(command) {
-        case "man portfolio":
-          $scope.result = "man portfolio";
-          break;
-        case "school":
-          $scope.result = "school";
-          break;
-        default:
-          $scope.result = "command not found: " + command;
-        }
-     $scope.myText += $scope.result + "<br>";
-    }
-    $scope.ip = "";
-  }
-});
-
-</script>
-
 </html>
