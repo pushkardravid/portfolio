@@ -30,8 +30,23 @@ $(document).on('keypress',function(e) {
       new_id = parseInt(activeElement.id.split("input_")[1]) + 1;
       console.log(new_id);
       switch (inputCommand) {
+      case "ls":
+        addMessage("education  skills  experience  projects  achievements  contact  download");
+        break;
         case "man portfolio":
           addMessage("portfolio");
+          break;
+        case "education":
+          addMessage("education");
+          break;
+        case "skills":
+          addMessage("skills");
+          break;
+        case "experience":
+          addMessage("experience");
+          break;
+        case "projects":
+          addMessage("projects");
           break;
         default:
           addMessage("command not found: " + inputCommand);
