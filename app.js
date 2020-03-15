@@ -1,3 +1,9 @@
+var contact_body = `<div>
+  <strong>Email:</strong> psdravid@ncsu.edu <br>
+  <strong>Phone:</strong> +1 984-444-1016 <br>
+  <strong>Linkedin:</strong> <a href="https://www.linkedin/in/pushkardravid">linkedin.com/in/pushkardravid</a> <br>
+</div>`;
+
 function addInput(id){
   var $input = $("<input>", {id: "input_" + id});
   $("#terminal").append("~$ ")
@@ -11,6 +17,8 @@ function addMessage(message){
 }
 
 function addHelp(){
+  
+
   var body = `<div>
       Commands <br>
       <table>
@@ -74,8 +82,8 @@ $(document).on('keypress',function(e) {
         case "man portfolio":
           addHelp();
           break;
-        case "education":
-          addMessage("education");
+        case "contact":
+          addMessage(contact_body);
           break;
         case "skills":
           addMessage("skills");
