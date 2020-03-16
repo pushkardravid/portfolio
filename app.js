@@ -1,8 +1,12 @@
 var contact_body = `<div>
   <strong>Email:</strong> psdravid@ncsu.edu <br>
   <strong>Phone:</strong> +1 984-444-1016 <br>
-  <strong>Linkedin:</strong> <a href="https://www.linkedin/in/pushkardravid">linkedin.com/in/pushkardravid</a> <br>
+  <strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/pushkardravid/" target="_blank">Pushkar's LinkedIn</a> <br>
 </div>`;
+
+var resume_download = `<a href="https://drive.google.com/file/d/1BEnz3vDoiFoZd1iKDZlUgfekl3N8zG6C/view?usp=sharing" target="_blank">Pushkar's resume</a>`;
+
+var achievements_body = `<div>Asd</div>`;
 
 function addInput(id){
   var $input = $("<input>", {id: "input_" + id});
@@ -23,32 +27,32 @@ function addHelp(){
       Commands <br>
       <table>
           <tr>
-              <td>education</td>
+              <td>&#x270e education</td>
               <td>Education bro</td>
           </tr>
           <tr>
-              <td>skills</td>
+              <td>&#9832; skills</td>
               <td>Education bro</td>
           </tr>
           <tr>
-              <td>experience</td>
+              <td>&#x262E experience</td>
               <td>Education bro</td>
           </tr>
           <tr>
-              <td>projects</td>
+              <td>&#9885; projects</td>
               <td>Education bro</td>
           </tr>
           <tr>
-              <td>achievements</td>
+              <td>&#8473; achievements</td>
               <td>Modest? not</td>
           </tr>
           <tr>
-              <td>contact</td>
-              <td>Them contact details</td>
+              <td>&#9742; contact</td>
+              <td>Them contact details.</td>
           </tr>
           <tr>
-              <td>download</td>
-              <td>Download a copy of my resume</td>
+              <td>&#128464 resume</td>
+              <td>Download a copy of my resume.</td>
           </tr>
       </table>
   </div>`;
@@ -77,7 +81,7 @@ $(document).on('keypress',function(e) {
       console.log(new_id);
       switch (inputCommand) {
       case "ls":
-        addMessage("education  skills  experience  projects  achievements  contact  download");
+        addMessage("education  skills  experience  projects  achievements  contact  resume");
         break;
         case "man portfolio":
           addHelp();
@@ -85,11 +89,11 @@ $(document).on('keypress',function(e) {
         case "contact":
           addMessage(contact_body);
           break;
-        case "skills":
-          addMessage("skills");
+        case "resume":
+          addMessage(resume_download);
           break;
-        case "experience":
-          addMessage("experience");
+        case "achievements":
+          addMessage(achievements_body);
           break;
         case "projects":
           addMessage("projects");
