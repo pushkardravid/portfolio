@@ -19,10 +19,54 @@ var project_body = `
 <div>
 <ul>
 <li>
-<h4>NLP - Entity Recognition for medical reports</h4>
-<i style="padding-top:0px;">Technology Stack: Python, AWS Lambda, Spacy, DocumentDB</i>
-<p>asdsfsd</p>
+<h4 style="margin-bottom:0px;">NLP - Entity Recognition for medical reports</h4>
+<i>Technology Stack: Python, AWS Lambda, Spacy, DocumentDB</i>
+<ul>
+<li>Created data pipeline to process patient data from unstructured medical reports for life insurance cases</li>
+<li>The pipeline involved tagging of PII, medicinal information, and diseases which was further stored in a database; to be consumed by
+medical reviewers for underwriting</li>
+</ul>
 </li>
+
+<li>
+<h4 style="margin-bottom:0px;">Backend Service - Drop Ticket Service</h4>
+<i>Technology Stack: Java, SpringBoot, ACORD, Apigee, LibertyB</i>
+<ul>
+<li>Designed and developed REST service to enable third party Brokers to submit insurance business to the company</li>
+<li>Introduced Test Driven Development for the project with code coverage of ~80% and created the integration test suite</li>
+</ul>
+</li>
+
+<li>
+<h4 style="margin-bottom:0px;">Machine Learning – Quick Quote</h4>
+<i>Technology Stack: Python, NumPy, Pandas, Sklearn, NLTK</i>
+<ul>
+<li>Trained a machine learning classifier to predict risk class of potential customer based on their health parameters like tobacco
+consumption, age, medical history</li>
+<li>Created data pipeline to consume emails from mailbox, then extract features from them for training and validation</li>
+</ul>
+</li>
+
+<li>
+<h4 style="margin-bottom:0px;">Life Insurance Calculator</h4>
+<i>Technology Stack: Java Spring, AngularJS, KarmaJS</i>
+<ul>
+<li>Trained a machine learning classifier to predict risk class of potential customer based on their health parameters like tobacco
+consumption, age, medical history</li>
+<li>Created data pipeline to consume emails from mailbox, then extract features from them for training and validation</li>
+</ul>
+</li>
+
+<li>
+<h4 style="margin-bottom:0px;">Datamart for Advisors</h4>
+<i>Technology Stack: AWS Lambda, Python, Mulesoft</i>
+<ul>
+<li>Developed data pipeline for management of Advisor Hierarchy using Mulesoft and AWS services</li>
+<li>Designed datastore to serve as the single source of truth of advisor hierarchy across organization and it is further consumed by
+business leaders for reporting and insights and other reporting systems</li>
+</ul>
+</li>
+
 </ul>
 </div>
 `;
