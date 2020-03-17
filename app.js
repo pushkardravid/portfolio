@@ -6,8 +6,26 @@ var contact_body = `<div>
 
 var resume_download = `<a href="https://drive.google.com/file/d/1BEnz3vDoiFoZd1iKDZlUgfekl3N8zG6C/view?usp=sharing" target="_blank">Pushkar's resume</a>`;
 
-var achievements_body = `<div>Asd</div>`;
+var achievements_body = `<div>
+<ul>
+<li>1st place at LexisNexis Annual Hackathon 2019 conducted for students in the triangle area, NC</li>
+<li>Winner at HackNC 2019 at UNC Chapel Hill among 250 teams conducted by MLH</li>
+<li>Employee Excellence Award – Gold, at Principal Financial Group, Pune</li>
+<li>Best project award for year in Shivaji University, Maharashtra, India sponsored by Tata Consultancy Services</li>
+</ul>
+</div>`;
 
+var project_body = `
+<div>
+<ul>
+<li>
+<h4>NLP - Entity Recognition for medical reports</h4>
+<i style="padding-top:0px;">Technology Stack: Python, AWS Lambda, Spacy, DocumentDB</i>
+<p>asdsfsd</p>
+</li>
+</ul>
+</div>
+`;
 function addInput(id){
   var $input = $("<input>", {id: "input_" + id});
   $("#terminal").append("~$ ")
@@ -96,7 +114,7 @@ $(document).on('keypress',function(e) {
           addMessage(achievements_body);
           break;
         case "projects":
-          addMessage("projects");
+          addMessage(project_body);
           break;
         default:
           addMessage("command not found: " + inputCommand);
