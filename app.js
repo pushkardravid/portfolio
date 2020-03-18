@@ -70,6 +70,117 @@ business leaders for reporting and insights and other reporting systems</li>
 </ul>
 </div>
 `;
+
+var experience_body = `<div>
+<ul>
+<li>
+Data Science Intern – NSF Center for Integrated Pest Management, Raleigh, NC
+<ul>
+<li>Working on data extraction and topic modelling of pest demographics in North America</li>
+<li>Development of portal for management of pest alerts and reports in Drupal</li>
+</ul>
+</li>
+
+<li>
+Senior Software Engineer - Principal Financial Group, Pune, India
+<ul>
+<li>Designed and developed web applications and REST services using pertaining to business domain</li>
+<li>Responsible for onboarding and training of new members to team for technology as well as domain</li>
+<li>Worked in a scaled agile team, collaborating with business partners and product managers from backlog grooming to release</li>
+<li>Promoted from software engineer trainee to software engineer to senior software engineer in 3 years</li>
+<li>Winner of multiple awards including Data analytics code jam winner, Ace performer for 2018, Annual excellence award for 2017</li>
+</ul>
+</li>
+
+<li>
+Software Developer Intern – Nimbrisk Technologies, Pune, India
+<ul>
+<li>Worked at an early stage startup on their core product development team</li>
+<li>Developed the internally consumed m-commerce platform for call center executives using Django and Angular</li>
+</ul>
+</li>
+
+
+</ul>
+</div>`;
+
+var skills_body = `
+<div>
+<table>
+<tr>
+<td>
+Programming Languages:
+</td>
+<td>
+Java, Python, Apex
+</td>
+</tr>
+
+<tr>
+<td>
+Databases:
+</td>
+<td>
+MySQL, MongoDB, PostgreSQL, Neo4j
+</td>
+</tr>
+
+<tr>
+<td>
+Tools & Softwares:
+</td>
+<td>
+AWS, Heroku, Linux, Jenkins, Git, Bamboo, Maven, Jira, SonarQube, Salesforce
+</td>
+</tr>
+
+<tr>
+<td>
+Web Technologies:
+</td>
+<td>
+JavaScript, HTML, CSS, Bootstrap, Lightning Salesforce
+</td>
+</tr>
+
+<tr>
+<td>
+Frameworks:
+</td>
+<td>
+SpringBoot, REST, SOAP, MapReduce, Django, Angular, Anaconda, Spacy, NLTK
+</td>
+</tr>
+
+</table>
+</div>
+`;
+
+var education_body = `
+<div>
+<ul>
+<li>
+<strong>North Carolina State University</strong>, Raleigh, NC, USA
+<br>
+Master of Computer Science 
+<br>
+<u>Selected Coursework:</u> Design and Analysis of Algorithms, Object Oriented Design and Development, Foundation of Data Science,
+Algorithms for Data Guided Business Intelligence, Database Management Concepts and Systems
+</li>
+
+<li>
+<strong>Walchand College of Engineering</strong>, Sangli, India
+<br>
+Bachelor of Technology in Information Technology 
+<br>
+<u>Selected Coursework:</u> Data Structures, Object Oriented Programming, Database Management Systems, Fuzzy Systems, Computer
+Networks, Linear Algebra, Operating Systems, Web Development, Computer Architecture
+</li>
+
+</ul>
+</div>
+`;
+
 function addInput(id){
   var $input = $("<input>", {id: "input_" + id});
   $("#terminal").append("~$ ")
@@ -159,6 +270,15 @@ $(document).on('keypress',function(e) {
           break;
         case "projects":
           addMessage(project_body);
+          break;
+        case "experience":
+          addMessage(experience_body);
+          break;
+        case "skills":
+          addMessage(skills_body);
+          break;
+        case "education":
+          addMessage(education_body);
           break;
         default:
           addMessage("command not found: " + inputCommand);
